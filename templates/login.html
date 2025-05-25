@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <title>Home</title>
+        <link rel="stylesheet" href="{% static 'login.css' %}">
+    </head>
+	<body>	
+		<nav class="navbar">
+			      <ul>
+			        <li>
+			          <a href="/home">Home</a>
+			        </li>
+			        <li>
+			          <a href="/signup">Sign Up</a>
+			        </li>
+			        <li>
+			          <a href="/login">Login</a>
+			        </li>
+			      </ul>
+			    </div>
+			</div>
+		</nav>
+		<div class="loginform">
+			<form action="/login/" method="post">
+			{% csrf_token %}
+				<input type="email" placeholder="Email" id="email" name="email" required>
+                <ul>
+                    <li><a href="/login_with_username">Login with Username</a></li>
+                </ul>
+				<input type="password" placeholder="Password" id='password' name="password" required>
+				<input type="text" placeholder="Secret Key" id='secretkey' name="secretkey" required>
+				<button type="submit" id="submit">Submit</button>
+				<h5><span id="dont">Don't</span> <span id="have">have an account</span><span id="ques">?</span><span id="create">Create</span> <span><a href="/signup">Sign Up</a></span></h5>
+			</form>
+			<div class="messages">
+			{% if messages %}
+			<ul class="messages">
+			    {% for message in messages %}
+			    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}><strong>{{ message }}</strong></li>
+			    {% endfor %}
+			</ul>
+			{% endif %}
+			</div>
+		</div>
+	</body>
+</html>

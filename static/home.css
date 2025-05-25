@@ -1,0 +1,36 @@
+body{
+	margin: 0;
+	padding: 0;
+	max-height: 100%;
+	max-width: 100%;
+	background-color: rgba(0, 0, 0, 0.856);
+	user-select: none;
+}
+
+.navbar{
+	margin: 18px;
+	display: flex;
+	position: relative;
+	justify-content: end;
+	border: 2px solid green;
+}
+
+.navbar ul,.navbar ul li a{
+	display: flex;
+	margin-right: 20px;
+	list-style-type: none;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: large;
+	font-weight: bolder;
+	color: rgb(81, 219, 81);
+}
+
+.main h1{
+	color: rgb(81, 219, 81);
+	display: flex;
+	justify-content: center;
+	margin-top: 100px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 40px;
+}

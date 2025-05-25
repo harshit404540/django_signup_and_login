@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">	
+	<head>
+		<meta charset="UTF-8" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Signup</title>
+		<link rel="stylesheet" href="{% static 'signup.css' %}">
+	</head>
+	<body>	
+		<nav class="navbar">
+		    <ul>
+		        <li>
+		            <a href="/home">Home</a>
+		        </li>
+		        <li>
+		            <a  href="/signup">Sign Up</a>
+		        </li>
+		        <li>
+		            <a  href="/login">Login</a>
+		        </li>
+			</ul>
+		</nav>
+		<div class="signupform">
+			<form action="/signup/" method="post">
+			{% csrf_token %}
+				<input type="name" placeholder="First Name" id="fname" name="fname" required>
+				<input type="name" placeholder="Last Name" id="lname" name="lname" required>
+				<input type="email" placeholder="Email" id="email" name="email" required>
+				<input type="name" placeholder="Username" id="username" name="username" required>
+				<input type="password" placeholder="Password" id='password1' name="password1" required>
+				<input type="password" placeholder="Re-Enter Password" id="password2" name="password2" required>
+				<button type="submit" id="submit">Submit</button>
+				<h5><span id="Already">Already</span> <span id="signed_up">signed_up</span><span id="ques">?</span> <span><a href="/login">Login</a></span></h5>
+			</form>
+			<div class="messages">
+			{% if messages %}
+			<ul class="messages">
+			    {% for message in messages %}
+			    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}><strong>{{ message }}</strong></li>
+			    {% endfor %}
+			</ul>
+			{% endif %}
+			</div>
+		</div>
+	</body>
+</html>

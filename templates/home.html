@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Home</title>
+		<link rel="stylesheet" href="{% static 'home.css' %}">
+	</head>
+	<body>
+		<nav class="navbar">
+		    <ul>
+		        <li>
+		            <a href="/home">Home</a>
+		        </li>
+		        <li class="nav-item">
+		            <a class="nav-link" href="/signup">Sign Up</a>
+		        </li>
+		        <li class="nav-item">
+		            <a class="nav-link" href="/login">Login</a>
+		        </li>
+			</ul>
+		</nav>
+		<div class="main">
+			<h1>WELCOME TO MY FIRST DJANGO WEBSITE...</h1>
+		</div>
+	</body>
+</html>
