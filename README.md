@@ -20,5 +20,11 @@ $ python manage.py migrate
 $ python manage.py createsuperuser
 $ python manage.py runserver
 ```
-
 Open your Browser and Type 127.0.0.1:8000(Default Port)
+
+### For Mail
+1. Go to google account manager
+2. Make sure your 2-step verification is on
+3. Search app password
+4. Creat app (name it Mail)
+5. Copy and Paste the 16 character password to EMAIL_HOST_PASSWORD = 'Your_app_password' in first/settings.py
