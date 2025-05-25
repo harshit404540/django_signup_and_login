@@ -15,6 +15,7 @@ To get this project up and running locally on your computer follow the following
 2. Run the following commands
 ```
 $ pip install -r requirements.txt
+$ python manage.py makemigrations
 $ python manage.py migrate
 $ python manage.py createsuperuser
 $ python manage.py runserver
